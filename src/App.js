@@ -35,15 +35,28 @@ function App() {
           Unable to load data. Please reload the page and try again.
         </h1>
       )}
-      {!!chartData.length &&
-        chartData.map(({ type, elements }, index) => (
-          <Visualizer
-            key={index}
-            type={type}
-            elements={elements}
-            index={index}
-          />
-        ))}
+      {!!chartData.length && (
+        <>
+          <h1
+            style={{
+              textAlign: "center",
+              fontSize: "4rem",
+              fontWeight: "bold",
+            }}
+          >
+            Clootrack Software Engineer (Frontend) Hiring Challenge
+          </h1>
+          <p style={{ textAlign: "center" }}>By Debjit Majumder</p>
+          {chartData.map(({ type, elements }, index) => (
+            <Visualizer
+              key={index}
+              type={type}
+              elements={elements}
+              index={index}
+            />
+          ))}
+        </>
+      )}
     </div>
   );
 }
